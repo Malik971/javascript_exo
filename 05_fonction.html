@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    // 3 Méthodes pour déclarer une fonction JS
+
+    // 1ere, Effet de hoisting, la déclaration se fait un premier
+    // à la lecture du document.
+
+    // Dans les parentheses, nous auront les parametres
+    // Déclaration
+    function bonjour(prenom, nom = "Ibo") {
+      let bool = true
+      if(bool){
+        return 'Salut ' + prenom + " " + nom;
+        
+      } else {
+        return "Je ne comprend pas"
+      }
+      
+    }
+
+    //L'appel de la fonction
+    console.log(bonjour("Malik"));
+    console.log(bonjour("Rolande", "Lamalle"));
+    console.log(bonjour("Orlane"));
+    
+    // Entre les acolades, l'action à effectuer
+
+    const salut = function(nom, prenom) {
+      return "Salut " + nom + " " + prenom
+    }
+
+    console.log(salut("Ibo", "Malik"));
+    
+    // Fonction fléché
+
+    const salut2 = (nom, prenom) => {
+      return "Salut " + nom + " " + prenom
+    }
+
+    // Fonction dans les objets => méthodes
+
+    let personne = {
+      personne: "Malik",
+      nom: "ibo",
+      presentation: function(){
+        console.log("Je m'appelle Malik");
+        console.log("Je m'appelle " + this.prenom + this.nom);
+        
+      }
+    }
+
+    personne.presentation()
+
+    console.log("BONJOUR".toLowerCase());
+    
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,38 @@
+#button {
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: darkred;
+}
+
+#H2 {
+    font-size: 16px;
+    line-height: 1.5;
+    color: blue;
+}
+
+#H2:hover {
+    color: darkblue;
+}
+
+#H3 {
+    font-size: 16px;
+    line-height: 1.5;
+    color: green;
+}
+
+#H3:hover {
+    color: darkgreen;
+    
+}
+
+#Paragraphe {
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+}

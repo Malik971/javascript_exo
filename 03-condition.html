@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+    EXERCICE: Mettre en place un système de recommandation pour une plateforme 
+    de streaming basé sur l'age de l'utisateur
+
+    Pour les moins de 13 ans ==> Elémentaire
+    Entre 13 et 18 ans ==> Avatar
+            Plus de 18 ans ==> Scream
+ 
+        Récupéré l'age de l'utilisateur, affiché la recommandation dans un 
+        console.log
+ 
+        */
+      // prompt --> fenetre pop up pour récupérer une saisie de l'utilisateur
+      let saisie = prompt("Entrez votre age");
+
+      if (saisie < 13) {
+        console.log(
+          "Tu es un enfant tu vas dans la catégorie élémentaire car tu as mois de 13 ans\n" +
+            saisie
+        );
+      } else if (saisie >= 13 && saisie <= 18) {
+        console.log("Tu es un avatar, t'es un ado et tu as " + saisie + " ans");
+      } else {
+        console.log("Scream tu as plus de 18 ans, Tu as " + saisie + " ans");
+      }
+
+      /*
+      Exo 2 : Systeme de réduction
+ 
+        Récupérer l'age de l'utilisateur
+        Récupérer le prix de la commande
+ 
+        Si l'utilisateur à plus de 60 ans --> Réduction de 5 euro
+        Si l'utilisateur à entre 20 et 30ans --> réduction de 5 euro
+ 
+        Si le prix de la commande dépasse les 20 euros --> Réduction de 2 euro
+ 
+        Les réductions doivent se cumuler
+
+      */
+
+      let prix = prompt("Quel est le prix de commande");
+
+      if (saisie > 60) {
+        console.log(
+          `Réduction de 5 euro Le prix: ${prix} passe à ${
+            prix - 5
+          } car vous avez plus de 60 ans`
+        );
+        prix = prix - 5;
+      } else if (saisie >= 20 && saisie <= 30) {
+        console.log(
+          `réduction de 5 euro Le prix: ${prix} passe à ${
+            prix - 5
+          } car vous ètes entre 20 ans et 30 ans`
+        );
+        prix = prix - 5;
+      } else {
+        console.log(`Pas de réduction`);
+      }
+
+      if (prix > 20) {
+        console.log(`Le prix passe à ${prix - 2}`);
+      }
+    </script>
+  </body>
+</html>

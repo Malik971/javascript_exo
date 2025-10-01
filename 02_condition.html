@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Les Conditions</h1>
+
+    <script>
+      // 3 partie distinct pour lancer une condition
+
+      // IF = Si  les conditions sont remplies alors on éxécute le code
+
+      let note = 6;
+
+      if (note > 10) {// Condition à vérifier == true ou false
+        // Si c'est true on éxécute ce code
+        console.log("Vous avez la moyenne");
+      } else if (note == 10) {
+        console.log("Vous avez la juste la moyenne");
+      } else {
+        console.log("Vous n'avez pas la moyenne");
+        
+      }
+
+      /*
+        Opérateur de comparaison
+        < Inferieur
+        > Superieur
+        <= Inferieur ou égal
+        >= Superieur ou égal
+        == Vérifier une égalité
+        === Vérifie l'égalité et le type
+        != Différent
+        !== Différent ou de type différent
+        */
+
+        moyenne_classe = 12;
+
+        // POUR le ET &&, Toutes les conditions doivent être remplies
+        if(note > 10 && note > moyenne_classe){
+          console.log("Félicitation vous avez la moyenne et vous êtes au dessus de la moyenne de la classe");
+          
+        } else{
+          console.log("Vous n'avez pas la moyenne ou vous êtes en dessous de la moyenne de la classe");
+        }
+
+        // POUR le OU ||, au moins une des conditions doit être remplie
+        if(note > 10 || note > moyenne_classe){
+          console.log("Bravo");
+        } else{
+          console.log("Dommage");
+        }
+          
+
+        /*
+        Opérateur logique
+        ET == &&
+        OU == ||
+
+
+
+        */
+    </script>
+  </body>
+</html>

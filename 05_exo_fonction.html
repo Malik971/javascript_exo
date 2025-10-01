@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Exercice 1 : Écris un programme qui transforme la phrase suivante en majuscules :
+      let phrase = "I love JavaScript";
+
+      function powerCase(mot){
+        // mot = mot.toUpperCase();
+        console.log(mot.toUpperCase());
+      }
+      powerCase(phrase)
+
+      // Exo 2 : Écris un programme qui vérifie si les phrases suivante contiennent le mot "loup" :
+      let phrase2 = "Promenons nous dans les bois";
+      let pharse3 = "La ou le loup n'y est pas";
+
+      const loup = (phrase) =>{
+        if(phrase.includes("loup")){
+          console.log("Il y a au moins un loup");
+          
+        }
+      }
+      loup(phrase2)
+      // loup(pharse3)
+
+      // Exo 3 : Génère 5 nombres aléatoires entre 0 et 50 (avec des décimales).
+
+        function genererNombres() {
+            for (let i = 0; i < 5; i++) {
+                //multiplie par le max
+                let nombre = Math.random() * 50;
+                console.log(nombre, "=>", Math.round(nombre));
+            }
+        }
+ 
+        //rep
+        genererNombres();
+ 
+      // Les arrondir à l’entier le plus proche.
+
+      // Afficher chaque nombre avant et après l’arrondi.
+    </script>
+  </body>
+</html>

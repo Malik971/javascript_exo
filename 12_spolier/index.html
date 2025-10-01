@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="app.js" defer></script>
+
+    <style>
+      .chiant {
+        background-color: black;
+        /* Attetion au surlignement */
+        /* opacity: 0 */
+        /* color: white */
+        /* display: none; */
+        /* visibility: hidden; */
+      }
+
+      .chiant::selection {
+        color: black;
+      }
+      .cache {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      2 version de spoiler, placer un texte caché au coeur d'un paragraphe, au
+      click révéler le texte.
+    </h2>
+    <h3>
+      Placer un bouton "Révéler, au click et montrer un nouveau paragraphe, et
+      le cacher si on reclick"
+    </h3>
+
+    <br />
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita totam
+      quibusdam odit ipsum asperiores est alias ut, perferendis consectetur
+      quaerat <span class="chiant">Malik est mort</span> aperiam iure non.
+      Dolor, iusto ipsum. Ducimus ratione possimus reiciendis aliquam autem,
+      vitae architecto ex enim expedita molestiae quaerat maxime repellendus
+      ullam quisquam. Sapiente, quaerat saepe nihil consectetur illum iste.
+    </p>
+
+    <button>Réveler</button>
+
+    <p class="cache">
+      Texte CACHEEEEEEEEEEEEEEEE Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Iusto quo, debitis blanditiis enim voluptas optio
+      voluptates modi aliquam assumenda veritatis officiis. Dolores asperiores
+      quod minima commodi eveniet atque velit neque?
+    </p>
+    <p>Malik est mort</p>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Les boucles</h1>
+    <script>
+      // nombres.length ==> Renvoie le nombre d'élément présent dans le tableau
+      /*
+        Exo 1 :
+        Écrire une boucle for qui affiche uniquement les nombres pairs entre 0 et 10.
+        */
+      let i = 10;
+      for (let i = 0; i < 10; i++) {
+        if (i % 2 == 0) {
+          console.log("les nombres paires:" + i);
+        }
+      }
+
+      /*
+        Exo 2 :
+        Écris une boucle qui calcule la somme de ce tableau:
+        */
+      let nombres = [5, 10, 15, 20];
+      let somme = 0;
+      for (let i = 0; i < nombres.length; i++) {
+        somme = somme + nombres[i];
+      }
+      console.log(somme);
+
+      // Exo 3
+
+      // Avec une boucle écris un programme qui prend une chaîne et la renverse.
+      // Exemple : "bonjour" → "ruojnob"
+
+      let s = "bonjour";
+      // let rev = s.split("").reverse().join("");
+      // console.log(rev);
+
+    for (let letter of s){
+      rev = s
+      console.log(rev.split("").reverse().join(""));
+      
+    }
+
+
+      // Exo 4
+
+      // Écris une boucle for qui trouve le plus grand nombre dans ce tableau :
+
+      let tab = [12, 45, 7, 89, 24, 67];
+      // const max = tab.reduce((a, b) => Math.max(a, b), -Infinity);
+      // console.log(max);
+
+      let ValeurMax = tab[0];
+      for(let i = 0; i < tab.length; i++){
+        if(tab[i] > ValeurMax){
+          console.log(ValeurMax = tab[i]);
+          
+        }
+      }
+      
+
+      // Exo 5
+
+      //Écris une boucle for...of qui dit bonjour à tous les prénoms du tableau suivant :
+      let prenoms = ["Alice", "Bob", "Charlie", "Diane"];
+      let salut = "Bonjour " 
+      for(let prenom of prenoms) {
+        console.log(salut + prenom);
+      }
+
+      // Exo 6
+ 
+        // Demandez un chiffre entre 0 et 10 à l'utilisateur. (prompt)
+        // Tant que l'utilisateur ne marque pas un chiffre entre 0 et 10, continuez à demander un chiffre.
+ 
+        // Info sup : Coupez un script ==> break
+
+        let chiffre = prompt("Donner un chiffre entre 0 et 10")
+
+      while(chiffre < 0 || chiffre > 10){
+        prompt("Donner un chiffre entre 0 et 10")
+        break;
+      }
+
+      // Exo 7
+ 
+        // Exo , creer un variable aDeviner = 8
+        // Faire deviner le chiffre a l'utilisateur
+        // Si c'est bon, lui dire, si c'est pas bon lui dire trop haut ou trop bas et redemander
+ 
+        // Limiter le nombre d'essai a 3 essai
+        // Si au bout de 3 essai il n'a pas trouver, lui dire echec
+ 
+        let aDeviner = 8
+        let chance = 2
+        let essai = prompt("Devine quel est le bon chiffre")
+        // for(let chance = 3; chance == 0; chance--){
+        while(chance > 0 && essai != aDeviner){
+          if(essai != aDeviner && chance > 0){
+            prompt("Continuer vous vous êtes tromper")
+            chance--
+          }else if (chance == 0) {
+            console.log("Vous avez perdu");
+            break;
+          }else{
+            console.log("Bravo !!! vous avez devinez le chiffre " + aDeviner);
+            
+          }
+        }
+        // }
+ 
+    </script>
+  </body>
+</html>

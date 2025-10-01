@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .active {
+        background-color: blue;
+      }
+
+      div {
+        display: none;
+      }
+
+      .texte_actif {
+        display: block;
+      }
+      .img_actif {
+        display: block;
+      }
+    </style>
+
+    <!-- <script src="app.js" defer></script> -->
+  </head>
+  <body>
+    <button class="active" data-id="1">Onglet 1</button>
+    <button data-id="2">Onglet 2</button>
+    <button data-id="3">Onglet 3</button>
+
+    <div class="texte_actif" data-text="1">
+      <h2>Onglet 1</h2>
+      <p>
+        Lorem ipsum doM?KJJamet consectetur adipisicing elit. Possimus
+        laudantium ipsum error commodi necessitatibus optio. Aperiam sed labore
+        placeat quisquam dolor perspiciatis a corrupti. Cumque temporibus autem
+        laboriosam consequatur velit?
+      </p>
+    </div>
+
+    <div data-text="2">
+      <h2>Onglet 2</h2>
+      <p>
+        DZDZZD ipsum dolor sit amet consectetur adipisicing elit. Possimus
+        laudantium ipsum error commodi necessitatibus optio. Aperiam sed labore
+        placeat quisquam dolor perspiciatis a corrupti. Cumque temporibus autem
+        laboriosam consequatur velit?
+      </p>
+    </div>
+
+    <div data-text="3">
+      <h2>Onglet 3</h2>
+      <p>
+        DZEFEVFVRipsum dolor sit amet consectetur adipisicing elit. Possimus
+        laudantium ipsum error commodi necessitatibus optio. Aperiam sed labore
+        placeat quisquam dolor perspiciatis a corrupti. Cumque temporibus autem
+        laboriosam consequatur velit?
+      </p>
+    </div>
+
+    <section data-section="Malik"></section>
+
+    <img src="" alt="" />
+    <h2></h2>
+
+    <img src="img1.jpg" alt="" data-titre="Montagne au lever du soleil" />
+
+    <img class="img-slide img_actif" src="img_chat1.jpeg" alt="" data-img="1" />
+    <img class="img-slide" src="img_chat2.jpeg" alt="" data-img="2" />
+    <img class="img-slide" src="img_chat3.jpeg" alt="" data-img="3" />
+
+    <script>
+      let btns = document.querySelectorAll("button");
+      let divs = document.querySelectorAll("div");
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // btn => Bouton sur lequel tu as cliqué
+
+          // On doit retirer la classe active du bouton actuellement actif, une solution est de retirer la class active peut importe le bouton
+          // On reparcours tous les boutons pour leur appliquer la suppression de la classe
+          btns.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+          // Une fois les classes retirés on peut ajouter la classe active sur le bouton qui a été cliqué
+
+          btn.classList.add("active");
+
+          divs.forEach((div) => {
+            // On retire la classe texte_actif sur toutes les divs
+            div.classList.remove("texte_actif");
+            // Si le data du bouton correspond au data du texte, alors on affiche le texte
+            if (div.dataset.text == btn.dataset.id) {
+              div.classList.add("texte_actif");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

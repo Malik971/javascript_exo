@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body{
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    button{
+      border: 0px;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    button.active{
+      background-color: cornflowerblue;
+      color: black;
+    }
+    .onglet{
+      border: 1px solid;
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 10px;
+      display: none;
+    }
+
+  </style>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <div class="tabs">
+    <button onclick="functionActive(0)" class='active'>Onglet 1</button>
+    <button onclick="functionActive(1)">Onglet 2</button>
+    <button onclick="functionActive(2)">Onglet 3</button>
+  </div>
+
+  <div>
+    <div class="onglet" style="display: block;">
+      <h2>Voici l'onglet 1</h2>
+    </div>
+    <div class="onglet">
+      <h2>Voici l'onglet 2</h2>
+    </div>
+    <div class="onglet">
+      <h2>Voici l'onglet 3</h2>
+    </div>
+  </div>
+
+  <!-- even au click -->
+  
+</body>
+</html>
