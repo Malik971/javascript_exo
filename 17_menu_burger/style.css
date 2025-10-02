@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(firefox.png), url(bubbles.png),
+    linear-gradient(to right, rgb(35, 133, 169), rgba(158, 220, 231, 0));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: bottom right, left, right;
+}
+
+/* .menu-burger {
+  width: 150px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+} */
+
+#burger {
+  cursor: pointer;
+  width: 30px;
+}
+#burger div {
+  background: black;
+  height: 4px;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+nav {
+  transform: translateX(-100%);
+  transition: 0.3s;
+}
+nav.nav-open {
+  transform: translateX(0);
+}
+
+#overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+}
+#overlay.overlay-open {
+  display: block;
+}

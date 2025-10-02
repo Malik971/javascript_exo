@@ -5,27 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
-  <script src="app.js"></script>
+  <script src="correction.js" defer></script>
 </head>
 <body>
-  <section class="section">
+  <!-- <section class="section">
     <div>
       <h1>PARTI DE CHI FOU MI - MALIK</h1>
       <h3>Choix possible</h3>
       <button>
-        <img src="pierre.jpg" alt="Image pierre">
+        <img src="pierre.jpg" alt="Image pierre" id="imgPierre">
       </button>
       <button>
-        <img src="feuille.jpg" alt="Image feuille">
+        <img src="feuille.jpg" alt="Image feuille" id="imgFeuille">
       </button>
       <button>
-        <img src="ciseaux.jpg" alt="Image ciseaux">
+        <img src="ciseaux.jpg" alt="Image ciseaux" id="imgCiseaux">
       </button>
     </div>
-    <div>
-      <h3>Score</h3>
+    <div class="score">
+      <h3>Score Joueur : <span id="resultat_du_joueur">0</span></h3>
+      <h3>Score de L'ordinateur : <span id="resultat_de_l_ordinateur">0</span></h3>
     </div>
+
+    <div >
+      <h2>Résultat du Duel</h2>
+      <p id="resultat_duel">Chi-Fu-Mi</p>
+    </div>
+  </section> -->
+
+  <button value="1">Papier</button>
+  <button value="2">pierre</button>
+  <button value="3">Ciseaux</button>
+
+  <section class="game">
+
   </section>
+
+  <template id="template">
+  <div class="">
+    <h2>Résultat = Victoire</h2>
+    <p id="comparaison">Moi = Pierre et || Ordi = Feuile</p>
+    <p>Tableau des scores</p>
+  </div>
+  </template>
   
 </body>
 </html>
