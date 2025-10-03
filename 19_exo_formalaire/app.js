@@ -49,3 +49,32 @@ formule.addEventListener('change', ()=>{
   }
   document.querySelector('#prix').textContent = prix + '€'
 })
+
+
+
+// let form = document.querySelector('form')
+
+// let pseudo = document.querySelector('#pseudo')
+// let password = document.querySelector('#password')
+// let pseudo_error = document.querySelector('#pseudo_error')
+// let password_error = document.querySelector('#password_error')
+
+// let div = document.querySelector('#affichage')
+
+// pseudo.addEventListener('blur', ()=>{
+//     if(pseudo.value.includes(' ')){
+//         pseudo_error.style.display = 'inline'
+//     }else{
+//         pseudo_error.style.display = 'none'
+//     }
+// })
+
+
+// password.addEventListener('blur', ()=>{
+//     if(password.value.length < 5){
+//         password_error.style.display = 'inline'
+//     }else{
+//         password_error.style.display = 'none'
+//     }
+// })
+ 
