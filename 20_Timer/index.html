@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="app.js" defer>
+
+
+      // function wait(duree){
+      //   const time = Date.now()
+      //   console.log(time);
+      //   while(Date.now() - time < duree){
+
+      //   }
+      // }
+      // console.log("Salut");
+      
+
+      // wait(2000)
+      // setTimeout => 2 paramètre, 1 l'action à faire, 2 le temps a attendre avant de lancer la fonction
+      // setTimeout(() => {
+      //   console.log("2 seconde pour ça");
+      // }, 2000);
+      // console.log("Je suis en avance sur le setTimeout");
+      // let inter = setInterval(() => {
+      //   console.log("Je suis en boucle");
+      //   }, 8000);
+
+      // Le returne des fonctions setTimeout et Interval vous renvoi un id
+      
+      // Cet id est nécessaire à la fonction clearTimeout et clearInterval pour stopper le timer
+      // clearInterval(2)
+
+      // Exo, Créer une fonction depart(), compte 3,2,1,GO
+      // function depart(){
+      //   let compte = 3
+      //   let inter = setInterval(() => {
+      //     console.log(compte);
+          
+      //     compte--
+      //     if(compte === 0){
+      //       clearInterval(inter)
+      //       console.log("Go !");
+      //     }
+          
+      //   }, 1000)
+      // }
+
+      // setTimeout(() =>{
+      //   console.log("Affeiche du menu burger");
+      //   setTimeout(() =>{
+      //     console.log("Affichage du carroussel");
+      //     setTimeout(()=>{
+      //       console.log("Affiche des photo");
+            
+      //     }, 4000)
+          
+      //   }, 2000)
+        
+      // }, 3000)
+
+      // depart()
+      
+
+      // const p = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     resolve("C'est bon")
+      //   }, 2000);
+      // })
+      // p.then(function(resultat_resolve){
+      //   console.log(resultat_resolve);
+      //   console.log(p);
+      // })
+
+      // p.catch(function(resultat_reject){
+      //   console.log(resultat_reject);
+      // })
+
+      // p.finally(() =>{
+      //   console.log("Je m'execute quoi qu'il arrive");
+      // })
+
+      // function wait(temps){
+      //   return new Promise((resolve, reject) => {
+      //     if(temps < 0){
+      //       reject("Le temps dois être positif")
+      //     }
+      //     setTimeout(() => {
+      //       resolve("Attente de " + temps + "ms terminée")
+      //     }, temps);
+      //   })
+      // }
+
+      // wait(1000)
+      // .then(message =>{
+      //   console.log(message);
+        
+      // })
+      // .catch(erreur =>{
+      //   console.log('Erreur : ', erreur);
+      // })
+
+      // wait(1000)
+      // .then(message =>{
+      //   console.log("3");
+      //   // p.style.display = none;
+      //   return wait(1000)
+      // })
+      // .then(message =>{
+      //   console.log("2");
+      //   return wait(1000)
+      // })
+      
+      // async function main(){
+      //   return 'salut'
+      // }
+      // console.log(main());
+      
+      // async function waitFor() {
+      //   await wait(1000)
+      //   console.log("3");
+      //   await wait(1000)
+      //   console.log("2");
+      //   await wait(1000)
+      //   console.log("1");
+      //   await wait(1000)
+      //   console.log("GO !");
+      // }
+
+      // async function test(){
+      //   try{
+      //     await wait(1000)
+      //   }catch(erreur){
+      //     console.log('Erreur : ', erreur);
+      //   }
+      // }
+      // test()
+
+      // async function bonjourEnchante() {
+      //   try{
+      //     const bonjour = await new Promise((resolve, reject) => {
+      //       setTimeout(() => {
+      //         resolve('Bonjour')
+      //       })
+      //     }, 1000)
+      //   }
+      //   finally{
+      //   const enchante = await new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve('Enchanté')
+      //     })
+      //   })
+      //   }
+      // }
+      // bonjourEnchante()
+
+  </script>
+</head>
+<body>
+
+
+  
+</body>
+</html>
